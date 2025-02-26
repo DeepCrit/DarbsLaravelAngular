@@ -1,0 +1,10 @@
+<div class="card-frame">
+  <img src={{bData.image}} alt="image" class="card-img">
+  <p class="bike-name">{{bData.name}}</p>
+  <!-- <p>{{bData.id}}</p> -->
+  <button class="card-btn" (click)="showReservation(bData)"  >Rezervēt</button>
+</div>
+@if(showModal){
+  <app-reservation-card #modal [bikeData]="bData" (closeEvent)="changeModalState($event)"/>
+}
+

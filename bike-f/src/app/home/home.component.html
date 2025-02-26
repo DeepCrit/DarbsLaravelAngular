@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>E-velosipēdu noma</h2>
+  <div class="c-grid">
+
+    @if(showData){
+      @for (d of data; track d.id) {
+        @if(d.available){
+          <app-card [bData]="d"/>
+        }
+      }
+
+    }@else if(showError){
+      <app-error-c message={{errorMsgEmpty}}/>
+    }
+
+  </div>
+</div>
+  <!-- <app-all-reservations /> -->
+
+
+

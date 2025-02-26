@@ -1,0 +1,26 @@
+
+<table>
+  <caption>
+    Atrastās rezervācijas
+  </caption>
+  <thead>
+    <tr>
+      <th >Darbinieks</th>
+      <th >Rezervētais ritenis</th>
+      <th >Rezervācijas laiks</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    @for (item of tableData; track item.id) {
+      <!-- <app-card [bData]="d"/> -->
+      <tr>
+        <td>{{item.first_name + " " +item.last_name}}</td>
+        <td>{{item.bike_name}}</td>
+        <td><strong>No: </strong>{{ item.rental_start}}<strong> Līdz: </strong>{{ item.rental_end}}</td>
+      </tr>
+    }
+
+  </tbody>
+</table>

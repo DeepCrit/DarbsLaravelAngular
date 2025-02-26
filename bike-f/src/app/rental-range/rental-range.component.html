@@ -1,0 +1,9 @@
+
+<div class="form-frame">
+  <h2>Dienu izdruka</h2>
+  <app-date-picker-c class="d-pick" (rangeDate)="fillData($event)"/>
+  <button (click)="searchData()" class="search-btn" [disabled]="disableBtn">{{btnName}}</button>
+
+</div>
+
+<app-table [tableData]="foundData">

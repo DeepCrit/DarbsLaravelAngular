@@ -1,0 +1,10 @@
+header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+
+}
+

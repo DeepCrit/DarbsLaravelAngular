@@ -1,0 +1,16 @@
+FROM node:latest AS build
+
+WORKDIR /app
+
+COPY bike-f/ .
+RUN npm install && npm run build
+
+# Nginx
+FROM nginx:alpine
+# build
+COPY --from=build /app/dist/bike-f/browser /usr/share/nginx/html
+#nginx konfiguracija
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+

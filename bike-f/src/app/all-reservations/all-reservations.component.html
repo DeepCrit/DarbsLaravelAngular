@@ -1,0 +1,30 @@
+@if(showData){
+  <table>
+    <caption>
+      Aktīvās rezervācijas
+    </caption>
+    <thead>
+      <tr>
+        <th >Darbinieks</th>
+        <th >Rezervētais ritenis</th>
+        <th >Rezervācijas laiks</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      @for (d of data; track d.id) {
+        <!-- <app-card [bData]="d"/> -->
+        <tr>
+          <td>{{d.first_name + " " +d.last_name}}</td>
+          <td>{{d.bike_name}}</td>
+          <td><strong>No: </strong>{{ d.rental_start}}<strong> Līdz: </strong>{{ d.rental_end}}</td>
+        </tr>
+      }
+
+    </tbody>
+  </table>
+
+}@else if(showError){
+  <app-error-c message={{errorMsgEmpty}}/>
+}

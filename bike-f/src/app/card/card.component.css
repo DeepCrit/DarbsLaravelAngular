@@ -1,0 +1,62 @@
+.card-frame{
+  border: 1px solid gray;
+  padding: 1rem;
+
+  max-width: 15%;
+  min-width: 10rem;
+
+  min-height: 10rem;
+  max-height: 15rem;
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.696);
+
+}
+
+
+.card-img{
+  border: 1px solid black;
+  /* min-height: 8rem; */
+  object-fit: cover;
+  width: 100%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.bike-name{
+  margin: 0;
+  text-overflow: ellipsis;
+}
+.card-btn{
+  padding: 10px;
+  width: 100%;
+  background-color: green;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.card-btn:hover{
+  background-color: rgba(0, 128, 0, 0.767);
+}
+.card-btn:active{
+  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+  -moz-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  -o-transform: scale(0.97);
+}

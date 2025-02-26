@@ -1,0 +1,22 @@
+table{
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 75%;
+  margin: auto;
+  padding: 1rem;
+}
+
+td,th{
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+caption{
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: var(--second-col);
+}

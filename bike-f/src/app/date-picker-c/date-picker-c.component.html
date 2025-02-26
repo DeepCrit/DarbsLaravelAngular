@@ -1,0 +1,19 @@
+<mat-form-field class="t-data">
+  <mat-label>{{info}}</mat-label>
+  <mat-date-range-input [rangePicker]="picker" [formGroup]="range">
+    <input matStartDate placeholder="Sākums"  [min]="minDate" [max]="maxDate" formControlName="rental_start" (dateChange)="sendData()">
+    <input matEndDate placeholder="Beigu laiks"  [min]="minDate" [max]="maxDate" formControlName="rental_end" (dateChange)="sendData()">
+
+  </mat-date-range-input>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+
+  @if (range.controls.rental_start.hasError('matStartDateInvalid')) {
+    <mat-error>Kļūda sākuma laikā</mat-error>
+  }
+  @if (range.controls.rental_end.hasError('matEndDateInvalid')) {
+    <mat-error>Kļūda beigu laikā</mat-error>
+  }
+</mat-form-field>
+
+<!-- <p>{{range.value.start}}</p> -->

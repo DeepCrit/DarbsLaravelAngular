@@ -1,0 +1,63 @@
+
+<div class="form-frame">
+
+  <form class="rent-form"  (ngSubmit)="submitRental()" [formGroup]="formD" >
+      <div class="f-data">
+        <div class="bike-data">
+          <h3 >Velosipēda dati</h3>
+          <img src={{bikeData.image}} alt="image" class="card-img">
+          <small>Velosipēda nosaukums</small>
+          <h3 class="name">{{bikeData != null ? bikeData.name : "NAV DATI"}}</h3>
+        </div>
+      </div>
+      <div class="client-data">
+        <div>
+          <h3>Darbinieku izvēle</h3>
+        <select class="client-select" formControlName="employees_id" >
+          <option [defaultSelected]=""></option>
+          @if(dataOk){
+            @for (emp of empData; track emp.id) {
+              <option class="sel-option" value={{emp.id}}>{{emp.first_name + " " +emp.last_name}}</option>
+            }
+          }@else{
+            <option [defaultSelected]="">NAV DATI</option>
+          }
+        </select>
+        </div>
+        <div class="time-data">
+          <h3>Laika izvēle</h3>
+          <div>
+            <mat-form-field class="t-data">
+              <mat-label>{{info}}</mat-label>
+              <mat-date-range-input [rangePicker]="picker" >
+                <input matStartDate placeholder="Sākums"  [min]="minDate" [max]="maxDate" formControlName="rental_start">
+                <input matEndDate placeholder="Beigu laiks"  [min]="minDate" [max]="maxDate" formControlName="rental_end">
+
+              </mat-date-range-input>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-date-range-picker #picker></mat-date-range-picker>
+
+              @if (formD.controls.rental_start) {
+                <mat-error>Kļūda sākuma laikā</mat-error>
+              }
+              @if (formD.controls.rental_end) {
+                <mat-error>Kļūda beigu laikā</mat-error>
+              }
+            </mat-form-field>
+          </div>
+          <!-- <app-date-picker-c class="t-comp" (rangeDate)="getRangeDate($event)"/> -->
+        @if (postErr) {
+          <mat-error>{{errMsg}}</mat-error>
+        }
+
+        </div>
+
+      </div>
+      <div class="btn-container">
+        <button class="ok-btn" type="submit">Apstiprināt</button>
+        <div class="cancel-btn" (click)="closeModal()">Atcelt</div>
+
+      </div>
+  </form>
+
+</div>

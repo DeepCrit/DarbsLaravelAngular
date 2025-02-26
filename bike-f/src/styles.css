@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Roboto";
+  scroll-behavior: smooth;
+  margin: 0;
+
+}
+
+:root{
+  --small-btn-size: 3rem;
+  --green-btn: green;
+  --red-btn: crimson;
+
+  --prim-col: #FF8343;
+  --prim-col-2: #ff8b51;
+
+  --second-col: #F1DEC6;
+  --thrd-col: #179BAE;
+  --forth-col: #4158A6;
+
+
+  --border-rad: 6px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

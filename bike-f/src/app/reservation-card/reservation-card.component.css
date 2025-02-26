@@ -1,0 +1,149 @@
+
+
+.form-frame{
+  overflow: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(20px);
+}
+
+.card-img{
+  border: 1px solid black;
+  /* min-height: 8rem; */
+  object-fit: cover;
+  width: 10rem;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+
+
+.cancel-btn:hover,.ok-btn:hover{
+  cursor: pointer;
+  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+  -moz-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  -o-transform: scale(0.97);
+}
+.cancel-btn:active, .ok-btn:active{
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+
+.f-data{
+
+  padding: 1rem;
+
+
+}
+
+.bike-data{
+  min-width: 10rem;
+  max-width: 10rem;
+
+  padding: 1rem;
+
+  .name{
+    text-align: center;
+    text-overflow: ellipsis;
+    padding-top: 5px;
+  }
+  small{
+    text-align: center;
+    padding-bottom: 5px;
+  }
+}
+
+.rent-form{
+  display: flex;
+
+  /* justify-content: space-evenly; */
+
+  background-color: white;
+
+  border: 1px solid gray;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 1rem;
+}
+
+.client-data{
+  min-width: 10rem;
+  max-width: 100%;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+
+}
+.client-select{
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.sel-option{
+  font-size: 1rem;
+}
+
+
+.cancel-btn{
+  background-color: var(--red-btn);
+  color: white;
+  font-size: 1rem;
+  border: 1px solid var(--red-btn);
+  padding: 1rem;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+
+  text-align: center;
+}
+
+.ok-btn{
+  text-align: center;
+  --green-btn: green;
+  background-color: var(--green-btn);
+  color: white;
+  font-size: 1rem;
+  border: 1px solid var(--green-btn);
+  padding: 1rem;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.btn-container{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
