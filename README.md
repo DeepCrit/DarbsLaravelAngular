@@ -5,7 +5,7 @@ docker compose up -d
 ```
 lai sāktu dokerizāciju.
 ```
-docker compose up -d
+docker compose down
 ```
 lai pārstātu konterizāciju.
 ##
