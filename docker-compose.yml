@@ -14,7 +14,8 @@ services:
       - "8000:8000"  
     networks:
       - laravel_network
-    command: ["sh", "-c", "php artisan key:generate && php artisan config:cache && php artisan serve --host=0.0.0.0 --port=8000"]
+    command: [ "sh", "-c", "cp .env.example .env && echo 'DB_DATABASE=database/laravel' >> .env && php artisan key:generate && php artisan config:cache && php artisan storage:link && php artisan serve --host=0.0.0.0 --port=8000" ]
+
 
   frontend:
     build:
